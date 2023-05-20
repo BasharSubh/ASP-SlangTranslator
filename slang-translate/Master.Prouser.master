@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.Prouser.master.cs" Inherits="MasterProuser" %>
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style3
+        {
+            position: relative;
+            margin: 0px;
+            padding: 0px;
+            background: #4b6c9e;
+            width: 100%;
+            left: 0px;
+            top: 0px;
+            height: 176px;
+        }
+        .style6
+        {
+            color: #0000FF;
+            font-family: "Times New Roman", Times, serif;
+        }
+        .style7
+        {
+            font-size: medium;
+        }
+        </style>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="style3">
+             <div class="loginDisplay" 
+                style="background-image: url('/slang_translate/data/header.png'); background-repeat: no-repeat; background-attachment: scroll; background-position: center center">
+                 <asp:Image ID="Image1" 
+                        runat="server" style="margin-left: 18px; margin-right: 18px;" 
+                    Height="115px" ImageAlign="Left" ImageUrl="~/data/logo.png" 
+                    Width="300px" />
+                
+                <br />
+                <span class="style6"><strong>
+                <br />
+                <br />
+                <br />
+                <br />
+                 <span class="style7">
+                 <br />
+                 مستخدم مميز</span></strong></span></div>
+            <div class="style1" style="background-color: #88C4FF" dir="rtl">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
+                    EnableViewState="False" IncludeStyleBlock="False" Orientation="Horizontal" 
+                    BackColor="#E3EAEB" DynamicHorizontalOffset="2" Font-Names="Verdana" 
+                    Font-Size="0.8em" ForeColor="#666666" StaticSubMenuIndent="10px">
+                    <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicMenuStyle BackColor="#E3EAEB" />
+                    <DynamicSelectedStyle BackColor="#1C5E55" />
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/prouser/Default.aspx" Text="الرئيسية"/>
+                       <asp:MenuItem NavigateUrl="~/prouser/add.aspx" Text="اضافة كلمة"/>
+                       <asp:MenuItem NavigateUrl="~/prouser/prosearch.aspx" Text="بحث متقدم"/>
+                       <asp:MenuItem NavigateUrl="~/prouser/send.aspx" Text="ارسال رسالة"/>
+                        <asp:MenuItem NavigateUrl="~/prouser/receive.aspx" Text="البريد الوارد"/>
+                        <asp:MenuItem NavigateUrl="~/prouser/manage.aspx" Text="ادراة المصطلحات"/>
+                          <asp:MenuItem NavigateUrl="~/account/UpdateProfileproUser.aspx" Text="تعديل الحساب"/>
+                          <asp:MenuItem NavigateUrl="~/prouser/about.aspx" Text="حول الموقع"/>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="خروج"/>
+                    </Items>
+                    <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticSelectedStyle BackColor="#1C5E55" />
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                <p>
+                    <br />
+                </p>
+                <p>
+                    &nbsp;</p>
+            </asp:ContentPlaceHolder>
+        </div>
+      
+      </div>
+              
+    </form>
+</body>
+</html>
